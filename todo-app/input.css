@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-warm: #feffac;
+  --color-2: #d67bff;
+}
+body {
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+.container {
+  background-color: var(--color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: bisque;
+  height: 540px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: -25px -15px 45px -8px rgba(115, 115, 115, 1) inset;
+  -webkit-box-shadow: -25px -15px 45px -8px rgba(115, 115, 115, 1) inset;
+  -moz-box-shadow: -25px -15px 45px -8px rgba(115, 115, 115, 1) inset;
+  box-shadow: 10px 10px 45px -8px rgba(255, 255, 255, 1) inset;
+  -webkit-box-shadow: 10px 10px 45px -8px rgba(255, 255, 255, 1) inset;
+  -moz-box-shadow: 10px 10px 45px -8px rgba(255, 255, 255, 1) inset;
+}
+.todo h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  position: fixed;
+  top: 100px;
+}
+.todo .row {
+  top: 200px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo .row input {
+  border-radius: 10px;
+  width: 200px;
+}
+.todo .row button {
+  position: relative;
+  background-color: black;
+  color: #feffac;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+.todo .row button:hover {
+  background: none;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  border-bottom: 2px solid turquoise;
+  border-top: 2px solid turquoise;
+}
+ul li {
+  list-style: none;
+  padding: 12px 8px 12px 8px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  background-color: #808080;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  left: -10px;
+  background-position: center;
+}
